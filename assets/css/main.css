@@ -36,6 +36,7 @@ section form input {
   background-color: white;
   font-size: 20px;
   color: black;
+  text-align: center;
 }
 section form button {
   margin-top: 20px;
