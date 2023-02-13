@@ -37,6 +37,8 @@ let morseAlphabet = [
     { letter: "Y", morseCode: "-.--" },
     { letter: "Z", morseCode: "--.." }
 ];
+
+
 let output = document.getElementById("textOutput");
 let input = document.querySelector('#textInput');
 let textInput = '';
@@ -60,5 +62,6 @@ function encryptToMorse() {
         }
     }
 
-    document.getElementById("textOutput").innerHTML = `Your encrypted message is:  ${morseOutput}`
+    document.getElementById("textOutput").innerHTML = `Your encrypted message is: 
+    <br> ${morseOutput}`
 };
