@@ -1,4 +1,4 @@
-let morseAlphabet = [
+const morseAlphabet = [
     { letter: "1", morseCode: ".----" },
     { letter: "2", morseCode: "..---" },
     { letter: "3", morseCode: "...--" },
@@ -37,28 +37,20 @@ let morseAlphabet = [
     { letter: "Y", morseCode: "-.--" },
     { letter: "Z", morseCode: "--.." }
 ];
-let output = document.getElementById("textOutput");
-let input = document.querySelector('#textInput');
-let textInput = '';
 
-function encryptToMorse() {
-    let textInput = input.value;
-    let morseOutput = '';
-
-    for (let i = 0; i < textInput.length; i++) {
-        let letter = textInput[i].toUpperCase();
-
-        let morseLetter = morseAlphabet.find(function(element) {
-            return element.letter === letter;
-        });
-
-        if (morseLetter) {
-            morseOutput += morseLetter.morseCode + ' ';
-        } else {
-            morseOutput = 'Error: letter not found in Morse code table.';
-            break;
-        }
+function encrypt(text) {
+    let result = "";
+    text = text.toUpperCase();
+    for (let i = 0; i < text.length; i++) {
+        let letter = text[i];
+        let code = morseAlphabet.find(el => el.letter === letter).morseCode;
+        result += code + " ";
     }
+    return result;
+}
 
-    document.getElementById("textOutput").innerHTML = `Your encrypted message is:  ${morseOutput}`
-};
+
+let input = document.getElementById("textInput").value;;
+let encryptedText = encrypt(input);
+console.log(encryptedText);
+//
