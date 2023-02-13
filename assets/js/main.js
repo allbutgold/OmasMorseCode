@@ -62,6 +62,5 @@ function encryptToMorse() {
         }
     }
 
-    document.getElementById("textOutput").innerHTML = `Your encrypted message is: 
-    <br> ${morseOutput}`
+    document.getElementById("textOutput").innerHTML = `${morseOutput}`
 };

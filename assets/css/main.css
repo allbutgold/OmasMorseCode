@@ -50,5 +50,8 @@ section form h2 {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+section form p {
+  font-size: 30px;
+}
 
 /*# sourceMappingURL=main.css.map */
